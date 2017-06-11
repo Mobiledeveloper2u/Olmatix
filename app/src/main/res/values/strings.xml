@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">MQTT Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_donate">Donate</string>
+    <string name="action_delete">Delete</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <string-array name="donation_google_catalog_values">
+        <item>1 USD</item>
+        <item>3 USD</item>
+        <item>5 USD</item>
+        <item>13 USD</item>
+        <item>20 USD</item>
+    </string-array>
+
+    <string name="donation_paypal_item">Donation</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_header_lastwill">Last-Will</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="qos_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="qos_spinner_title">QOS</string>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="pref_description_ssl">Use SSL for connection</string>
+    <string name="pref_description_ws">Use Websockets for connection</string>
+    <string name="pref_title_cleansession">Clean Session</string>
+    <string name="pref_title_ssl">Enable SSL</string>
+    <string name="pref_title_ws">Use Websockets</string>
+    <string name="pref_title_url">URL</string>
+    <string name="pref_title_clientid">Client ID</string>
+    <string name="pref_default_url"></string>
+    <string name="pref_title_retained">Retained</string>
+    <string name="pref_title_topic">Topic</string>
+    <string name="pref_title_message">Message</string>
+    <string name="pref_title_qos">QOS</string>
+    <string name="pref_default_port">1883</string>
+    <string name="pref_default_keepalive">1200</string>
+    <string name="pref_title_port">Port</string>
+    <string name="pref_title_keepalive">Keep-Alive Interval (seconds)</string>
+    <string name="pref_default_user"></string>
+    <string name="pref_title_user">Username</string>
+    <string name="pref_default_password" />
+    <string name="pref_title_password">Password</string>
+    <string name="pref_header_server">Server</string>
+    <string name="title_activity_message">Messages</string>
+    <string name="title_activity_publish">Publish Messages</string>
+    <string name="title_activity_published_topic">Published messages</string>
+    <string name="title_activity_publish_tasker">Message Published</string>
+    <string name="title_activity_action_edit">Publish MQTT Message</string>
+    <string name="topic">Topic</string>
+    <string name="message">Message</string>
+    <string name="message_tasker_var">Message tasker variable name</string>
+    <string name="plugin_name">MQTT Publish</string>
+    <string name="twofortyfouram_locale_menu_dontsave">Cancel</string>
+    <string name="twofortyfouram_locale_menu_save">Save</string>
+    <string name="twofortyfouram_locale_menu_help">Help</string>
+    <string name="twofortyfouram_locale_breadcrumb_format">%1$s%2$s%3$s</string>
+    <string name="twofortyfouram_locale_breadcrumb_separator"><![CDATA[\\u0020>\\u0020]]></string>
+    <string name="title_activity_donation">DonationActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="pref_default_retry_interval">100</string>
+    <string name="pref_title_retry_interval">Retry Interval (seconds)</string>
+    <string name="pref_title_retry_summary">If the connection to the broker is lost, this value will be used as the interval between connection retries.</string>
+</resources>

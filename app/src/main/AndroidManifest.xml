@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.dc297.mqttclpro">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SubscribeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".SubscribeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.dc297.mqttclpro.SubscribeActivity" />
+        </activity>
+
+        <service
+            android:name=".MQTTService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MessageActivity"
+            android:label="@string/title_activity_message"
+            android:parentActivityName=".SubscribeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.dc297.mqttclpro.SubscribeActivity" />
+        </activity>
+        <activity
+            android:name=".PublishActivity"
+            android:label="@string/title_activity_publish"
+            android:parentActivityName=".SubscribeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.dc297.mqttclpro.SubscribeActivity" />
+        </activity>
+        <activity
+            android:name=".PublishedTopicActivity"
+            android:label="@string/title_activity_published_topic"
+            android:parentActivityName=".PublishActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.dc297.mqttclpro.PublishActivity" />
+        </activity>
+        <activity
+            android:name=".tasker.PublishTaskerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_publish_tasker"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="net.dinglisch.android.tasker.ACTION_EDIT_EVENT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".tasker.ActionEditActivity"
+            android:exported="true"
+            android:label="@string/title_activity_action_edit"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".tasker.FireReceiver"
+            android:exported="true"
+            android:process=":background">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".tasker.QueryReceiver"
+            android:exported="true"
+            android:process=":background">
+
+            <!-- this Intent filter allows the plug-in to discovered by Locale and be queried -->
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.QUERY_CONDITION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".MyIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".DonationActivity"
+            android:label="@string/title_activity_donation"
+            android:parentActivityName=".SubscribeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.dc297.mqttclpro.SubscribeActivity" />
+        </activity>
+    </application>
+
+</manifest>
